@@ -10,7 +10,7 @@
     </v-layout>
 
     <ImgBanner imgSrc="https://source.unsplash.com/random/1600x900">
-      <div style="line-height:1.2em; font-size: 8vw;" slot="text">We will find a way.<br> We always have.</div>
+      <div style="line-height:1.2em; font-size: 6vw;" slot="text">Call Me Hyoya<br>I'm Developer</div>
     </ImgBanner>
     <v-container>
 
