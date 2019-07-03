@@ -1,6 +1,6 @@
 <template>
-  <div style="background-color:yellow">
-    <h1>This is Test - MyFooter Content</h1>
+  <div style="background-color:#cecece; padding:2%" class="text-xs-center">
+    Copyright 2019. 서효정. All rights reserved.
   </div>
 </template>
 
