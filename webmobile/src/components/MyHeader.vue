@@ -3,7 +3,7 @@
     <v-flex column>
       <v-toolbar fixed style="background:#ff6783;">
 
-        <v-btn icon to="/">🌺 </v-btn>
+        <v-btn icon to="/">🌺</v-btn>
         <v-toolbar-title class="white--text">HYOYA</v-toolbar-title>
         <v-spacer></v-spacer>
 

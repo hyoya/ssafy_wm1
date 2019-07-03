@@ -4,6 +4,7 @@ import HomePage from './views/HomePage.vue'
 import PostPage from './views/PostPage.vue'
 import PortfolioPage from './views/PortfolioPage.vue'
 import LoginPage from './views/LoginPage.vue'
+import PortfolioWrite from './views/PortfolioWrite.vue'
 import Vuetify from 'vuetify'
 
 Vue.use(Router)
@@ -28,10 +29,15 @@ export default new Router({
 			name: 'portfolio',
 			component: PortfolioPage
 		},
-		{
+    {
 			path: '/login',
 			name: 'login',
 			component: LoginPage
-		}
+		},
+    {
+			path: '/portfolioWrite',
+			name: 'portfolioWrite',
+			component: PortfolioWrite
+		},
   ]
 })
