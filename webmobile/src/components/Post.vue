@@ -2,13 +2,19 @@
   <v-layout py-4 h-100>
     <v-flex row>
       <div class="caption">{{formatedDate}}</div>
-      <h2 class="color-333 headline font-weight-light">{{title}}</h2>
-      <p class="mb-1 color-666 font-weight-light subheading">{{body}}</p>
+      <h2 class="color-333 headline font-weight-light" v-line-clamp:20="1">{{title}}</h2>
+      <p class="mb-1 color-666 font-weight-light subheading" v-line-clamp:20="4">{{body}}</p>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+
+import Vue from 'vue'
+import lineClamp from 'vue-line-clamp'
+
+Vue.use(lineClamp,{})
+
 export default {
 	name: 'Post',
 	props: {
@@ -34,4 +40,3 @@ export default {
     height: 100%;
   }
 </style>
-

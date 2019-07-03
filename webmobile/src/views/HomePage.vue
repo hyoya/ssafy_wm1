@@ -19,7 +19,7 @@
           </p>
         </v-flex>
         <v-flex sm4>
-          <v-img :src="getImgUrl('prof.jpg')" aspect-ratio="1.5" class="hidden-xs-only"/>
+          <v-img :src="getImgUrl('prof.png')" aspect-ratio="1.5" class="hidden-xs-only"/>
         </v-flex>
       </v-layout>
 
