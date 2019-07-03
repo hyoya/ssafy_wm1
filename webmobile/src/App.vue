@@ -9,6 +9,7 @@
 }
 </style>
 
+
 <template>
   <v-app>
     <v-content>
@@ -51,9 +52,15 @@ export default {
     MyFooter,
     BackToTop,
   },
+
   data() {
     return {
-      //
+      browser : BrowserDetect
+    };
+  },
+  beforeCreate() {
+    if(browser !== 'Chrome') {
+      alert("크롬만 지원")
     }
   }
 }
