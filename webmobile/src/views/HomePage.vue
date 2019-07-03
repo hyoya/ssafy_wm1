@@ -1,9 +1,19 @@
+
 <template>
+
   <div>
+    <!-- Header -->
+    <v-layout column>
+      <v-flex xs12>
+        <MyHeader/>
+      </v-flex>
+    </v-layout>
+
     <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
       <div style="line-height:1.2em;" slot="text">We will find a way.<br> We always have.</div>
     </ImgBanner>
     <v-container>
+
       <!-- About Me -->
       <v-layout my-5>
         <v-flex xs8>
@@ -40,7 +50,16 @@
           <RepositoryList></RepositoryList>
         </v-flex>
       </v-layout>
+
     </v-container>
+
+    <!-- Footer -->
+    <v-layout column>
+      <v-flex xs12>
+        <MyFooter/>
+      </v-flex>
+    </v-layout>
+    
   </div>
 </template>
 
@@ -49,6 +68,8 @@ import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
+import MyHeader from "../components/MyHeader"
+import MyFooter from "../components/MyFooter"
 
 export default {
 	name: 'HomePage',
@@ -56,7 +77,9 @@ export default {
 		ImgBanner,
 		PortfolioList,
 		PostList,
-		RepositoryList
+		RepositoryList,
+    MyHeader,
+    MyFooter
 	},
 	methods: {
 		getImgUrl(img) {
