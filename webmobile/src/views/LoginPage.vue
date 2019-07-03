@@ -1,11 +1,5 @@
 <template>
-  <!-- Header -->
-  <v-layout column>
-    <v-flex xs12>
-      <MyHeader/>
-    </v-flex>
-  </v-layout>
-  
+
   <v-layout align-center justify-center row fill-height>
     <v-flex xs5 text-xs-center>
       <v-layout align-center justify-center row fill-height elevation-5 style="min-height:500px;" white pa-4>
@@ -25,7 +19,8 @@ export default {
 	data() {
 		return {}
 	},
-	components: {},
+	components: {
+  },
 	methods: {
 		async loginWithGoogle() {
 			const result = await FirebaseService.loginWithGoogle()

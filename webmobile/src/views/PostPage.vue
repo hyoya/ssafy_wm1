@@ -6,7 +6,7 @@
         <MyHeader/>
       </v-flex>
     </v-layout>
-    
+
     <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
       <div style="line-height:1.2em;font-size:1.2em;" slot="text">Post</div>
     </ImgBanner>
@@ -20,18 +20,29 @@
       </v-layout>
 
     </v-container>
+    
+    <!-- Footer -->
+    <v-layout column>
+      <v-flex xs12>
+        <MyFooter/>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
 <script>
 import ImgBanner from '../components/ImgBanner'
 import PostList from '../components/PostList'
+import MyHeader from "../components/MyHeader"
+import MyFooter from "../components/MyFooter"
 
 export default {
 	name: 'PostPage',
 	components: {
 		ImgBanner,
 		PostList,
+    MyHeader,
+    MyFooter
 	}
 }
 </script>
