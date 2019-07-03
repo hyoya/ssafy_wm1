@@ -2,12 +2,6 @@
 <template>
 
   <div>
-    <!-- Header -->
-    <v-layout column>
-      <v-flex xs12>
-        <MyHeader/>
-      </v-flex>
-    </v-layout>
 
     <ImgBanner imgSrc="https://source.unsplash.com/random/1600x900">
       <div style="line-height:1.2em; font-size: 6vw;" slot="text">오늘이 내일을 만든다</div>
@@ -56,12 +50,6 @@
 
     </v-container>
 
-    <!-- Footer -->
-    <v-layout column>
-      <v-flex xs12>
-        <MyFooter/>
-      </v-flex>
-    </v-layout>
 
   </div>
 </template>
@@ -71,8 +59,6 @@ import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
-import MyHeader from "../components/MyHeader"
-import MyFooter from "../components/MyFooter"
 
 export default {
 	name: 'HomePage',
@@ -81,8 +67,6 @@ export default {
 		PortfolioList,
 		PostList,
 		RepositoryList,
-    MyHeader,
-    MyFooter
 	},
 	methods: {
 		getImgUrl(img) {
