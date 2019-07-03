@@ -1,5 +1,12 @@
 <template>
   <div>
+    <!-- Header -->
+    <v-layout column>
+      <v-flex xs12>
+        <MyHeader/>
+      </v-flex>
+    </v-layout>
+    
     <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
       <div style="line-height:1.2em;font-size:1.2em;" slot="text">Post</div>
     </ImgBanner>
