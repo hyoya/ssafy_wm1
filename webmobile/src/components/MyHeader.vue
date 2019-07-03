@@ -1,8 +1,7 @@
 <template>
-  <div style="background-color:red; text-align:center">
-    <h1>Hyoyas</h1>
-    <!-- TODO : 내용을 채워야함 -->
-  </div>
+  <v-toolbar fixed >
+    <h1>Hyoya🌺</h1>
+  </v-toolbar>
 </template>
 
 <script>
