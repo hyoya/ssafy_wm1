@@ -43,7 +43,7 @@ export default {
 			this.portfolios = await FirebaseService.getPortfolios()
 		},
 		loadMorePortfolios() {
-
+      this.limits += 4;
     }
 	},
 }

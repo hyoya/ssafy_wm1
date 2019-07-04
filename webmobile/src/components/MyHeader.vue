@@ -5,6 +5,7 @@
 
         <v-btn icon to="/">🌺</v-btn>
         <v-toolbar-title class="white--text">HYOYA</v-toolbar-title>
+        <a href="#" id="favorite" title="즐겨찾기 등록">즐겨찾기</a>
         <v-spacer></v-spacer>
 
         <v-toolbar-items class="hidden-xs-only">
