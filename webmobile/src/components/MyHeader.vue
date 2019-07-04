@@ -5,7 +5,7 @@
 
         <v-btn icon to="/">🌺</v-btn>
         <v-toolbar-title class="white--text">HYOYA</v-toolbar-title>
-        <a href="#" id="favorite" title="즐겨찾기 등록">즐겨찾기</a>
+        <v-icon v-on:click="AddBookmark">bookmark</v-icon>
         <v-spacer></v-spacer>
 
         <v-toolbar-items class="hidden-xs-only">
@@ -49,6 +49,27 @@ export default {
       {icon : 'post', title:'POST', link:"/post"},
       {icon : 'login', title:'LOGIN', link:"/login"},
     ],
-  })
+  }),
+  methods: {
+ AddBookmark : function() {
+   var url = this.location;
+   var title = document.title;
+   if (window.sidebar && window.sidebar.addPanel){ // Firefox
+   window.sidebar.addPanel(sidebartitle, sidebarurl,"");
+   alert("FF")
+   }
+   else if ( document.all ) { // IE Favorite
+   window.external.AddFavorite(url, title);
+   alert("IE")
+   }
+   else if (window.opera && window.print) {
+   // do nothing
+   alert("OPERA")
+    }
+   else if (navigator.appName=="Netscape") {
+    alert((navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D 키를 눌러 즐겨찾기에 등록하실 수 있습니다.');
+  }
+}
+}
 }
 </script>
