@@ -9,7 +9,12 @@
       ></Portfolio>
     </v-flex>
     <v-flex xs12 text-xs-center round my-5 v-if="loadMore">
-      <v-btn color="info" dark v-on:click="loadMorePortfolios"><v-icon size="25" class="mr-2">fa-plus</v-icon> 더 보기</v-btn>
+
+        <v-btn color="info" dark v-on:click="loadMorePortfolios" v-if="flag">
+          <v-icon size="25" class="mr-2">fa-plus</v-icon>
+           더 보기
+        </v-btn>
+
       <v-btn color="info" dark to="/portfolioWrite"> 글 쓰기 </v-btn>
     </v-flex>
 
@@ -25,7 +30,8 @@ export default {
 	name: 'PortfoliosList',
 	props: {
 		limits: {type: Number, default: 4},
-    loadMore: {type: Boolean, default: false}
+    loadMore: {type: Boolean, default: false},
+    flag :{type:Boolean, default:true},
 	},
 	data() {
 		return {
@@ -33,7 +39,7 @@ export default {
 		}
 	},
 	components: {
-		Portfolio
+		Portfolio,
 	},
 	mounted() {
 		this.getPortfolios()
@@ -44,6 +50,9 @@ export default {
 		},
 		loadMorePortfolios() {
       this.limits += 4;
+      if(this.portfolios.length <= this.limits){
+        this.flag = false;
+      }
     }
 	},
 }
